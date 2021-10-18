@@ -9,7 +9,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a href="#" className="btn btn-primary">
+        <a href="http://wwww.google.fr" className="btn btn-primary">
           Search
         </a>
       </header>
