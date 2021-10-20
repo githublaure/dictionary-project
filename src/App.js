@@ -1,4 +1,4 @@
-import pinkcutefolder from "./pinkcutefolder.png";
+import letscode from "./letscode.gif";
 import "./App.css";
 import Dictionary from "./Dictionary.js";
 
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
-          <img src={pinkcutefolder} className="App-logo img-fluid" alt="logo" />
+          <img src={letscode} className="App-logo img-fluid" alt="logo" />
         </header>
         <main>
           <Dictionary />
