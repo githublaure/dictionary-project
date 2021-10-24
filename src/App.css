@@ -9,7 +9,7 @@
 }
 
 .App footer {
-  color: #61dafb;
+  color: #9876f2;
   text-align: center;
   margin: 0 auto;
 }
@@ -25,7 +25,7 @@ body {
   justify-content: center;
 }
 
-.link {
+.link .a {
   display: inline-block;
   position: relative;
   background-color: #9896f1;
