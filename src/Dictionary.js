@@ -19,10 +19,11 @@ export default function Dictionary(props) {
   }
 
   function search() {
-    // documentation: https://dictionaryapi.dev/e
+    // API dictionary documentation: https://dictionaryapi.dev/e
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios.get(apiUrl).then(handleDictionResponse);
 
+    // API pexels for photos
     let pexelsApiKey =
       "563492ad6f91700001000001a080dcf3127941029259c9153d94df32";
     let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
