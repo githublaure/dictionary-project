@@ -6,13 +6,11 @@ export default function Phonetic(props) {
   return (
     <div className="Phonetic">
       {" "}
-    
-        <a href={props.phonetic.audio} target="_blank" rel="noreferrer">
-          <button type="button" class="btn btn-warning">
-            Listen
-       
-        </a>
-      </button>
+      <a href={props.phonetic.audio} target="_blank" rel="noreferrer">
+        <button type="button" class="btn btn-warning">
+          Listen
+        </button>
+      </a>
       <br />
       <span className="text">{props.phonetic.text}</span>
     </div>
