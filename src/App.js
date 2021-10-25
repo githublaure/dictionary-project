@@ -3,7 +3,7 @@ import "./App.css";
 import Dictionary from "./Dictionary";
 import githubj from "./githubj.png";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="container">
@@ -18,7 +18,7 @@ function App() {
           {" "}
           Coded by Laure Agrech{" "}
           <a
-            href="https://github.com/githublaure"
+            href="https://github.com/githublaure/dictionary-project"
             target="_blank"
             rel="noreferrer"
           >
@@ -30,5 +30,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
