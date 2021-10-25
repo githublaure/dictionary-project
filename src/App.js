@@ -1,6 +1,7 @@
 import letscode from "./letscode.gif";
 import "./App.css";
-import Dictionary from "./Dictionary.js";
+import Dictionary from "./Dictionary";
+import githubj from "./githubj.png";
 
 function App() {
   return (
@@ -10,10 +11,21 @@ function App() {
           <img src={letscode} className="App-logo img-fluid" alt="logo" />
         </header>
         <main>
-          <Dictionary />
+          <Dictionary defaultKeyword="code" />
         </main>
 
-        <footer className="text-center"> Coded by Laure Agrech</footer>
+        <footer className="text-center">
+          {" "}
+          Coded by Laure Agrech{" "}
+          <a
+            href="https://github.com/githublaure"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={githubj} width="30px" alt="github" />
+          </a>
+          <br />
+        </footer>
       </div>
     </div>
   );
