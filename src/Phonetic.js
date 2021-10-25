@@ -6,7 +6,7 @@ export default function Phonetic(props) {
   return (
     <div className="Phonetic">
       <a href={props.phonetic.audio} target="_blank" rel="noreferrer">
-        <button type="button" class="btn btn-light">
+        <button type="button" class="btn btn-light" border-radius="20px">
           Listen
         </button>
       </a>

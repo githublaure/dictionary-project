@@ -16,3 +16,10 @@
   opacity: 0.5;
   font-weight: bold;
 }
+
+.btn {
+  border-radius: 40px;
+  color: #f8d363;
+  font-weight: bolder;
+  margin-left: -20px;
+}
