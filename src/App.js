@@ -11,25 +11,26 @@ export default function App() {
           <img src={letscode} className="App-logo img-fluid" alt="logo" />
         </header>
         <main>
-          <Dictionary defaultkeyword="rainbow" />
+          <Dictionary defaultKeyword="code" />
         </main>
 
         <footer className="text-center">
           {" "}
-          Coded by{" "}
+          This app was coded by{" "}
           <a
             href="https://www.linkedin.com/in/laure-agrech/"
             target="_blank"
             rel="noreferrer"
           >
-            Laure Agrech
+            Laure Agrech,
           </a>{" "}
-          and is open-sourced on GitHub
+          is open-sourced on{" "}
           <a
-            href="https://laure-api-dictionary-react-app.netlify.app"
+            href="https://github.com/githublaure"
             target="_blank"
             rel="noreferrer"
           >
+            GitHub
             <img src={githubj} width="30px" alt="github" />
           </a>{" "}
           and{" "}
