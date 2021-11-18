@@ -11,7 +11,7 @@ export default function App() {
           <img src={letscode} className="App-logo img-fluid" alt="logo" />
         </header>
         <main>
-          <Dictionary defaultKeyword="code" />
+          <Dictionary />
         </main>
 
         <footer className="text-center">

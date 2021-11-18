@@ -54,7 +54,7 @@ export default function Dictionary(props) {
             <input
               type="search"
               onChange={handleKeywordChange}
-              defaultValue={props.defaultKeyword}
+              defaultValue={null}
             />
           </form>
           <div className="hint">
@@ -66,7 +66,7 @@ export default function Dictionary(props) {
       </div>
     );
   } else {
-    load();
+    search();
     return "Loading";
   }
 }
