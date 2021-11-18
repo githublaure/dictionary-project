@@ -5,13 +5,26 @@ export default function Phonetic(props) {
   console.log(props.phonetic);
   return (
     <div className="Phonetic">
-      <a href={props.phonetic.audio} target="_blank" rel="noreferrer">
-        <button type="button" class="btn btn-light" border-radius="20px">
-          Listen
-        </button>
-      </a>
-      <br />
-      <span className="text">{props.phonetic.text}</span>
+      <ul>
+        {props.phonetics.map((phonetic, index) => {
+          function playAudio(event) {
+            event.preventDefault();
+            let playAudio = new Audio(phonetic.audio);
+            playAudio.play();
+          }
+
+          return (
+            <li key={index}>
+              {" "}
+              <strong>Phonetics:</strong>
+              {phonetic.text}{" "}
+              <button onClick={playAudio}>
+                <img src="/img/audio.svg" alt="audio icon" />
+              </button>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
