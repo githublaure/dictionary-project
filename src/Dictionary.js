@@ -5,41 +5,38 @@ import Photos from "./Photos";
 import "./Dictionary.css";
 
 export default function Dictionary(props) {
-  let [keyword, setKeyword] = useState(props.defaultKeyword);
+  let [search, setSearch] = useState("");
   let [results, setResults] = useState(null);
-  let [loaded, setLoaded] = useState(false);
   let [photos, setPhotos] = useState(null);
 
-  function handleDictionResponse(response) {
+  function handleResponse(response) {
+    console.log(response.data[0]);
     setResults(response.data[0]);
   }
 
-  function handlePexelsResponse(response) {
+  function handleDisplayPhotos(response) {
     setPhotos(response.data.photos);
   }
 
-  function search() {
+  function dictionary(event) {
+    event.preventDefault();
     // API dictionary documentation: https://dictionaryapi.dev/e
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
-    axios.get(apiUrl).then(handleDictionResponse);
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${search}`;
+    axios.get(apiUrl).then(handleResponse);
 
     // API pexels for photos
     let pexelsApiKey =
       "563492ad6f91700001000001a080dcf3127941029259c9153d94df32";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${search}&per_page=9`;
     let headers = { Authorization: `Bearer ${pexelsApiKey}` };
-    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
+    axios.get(pexelsApiUrl, { headers: headers }).then(handleDisplayPhotos);
   }
 
   function handleSubmit(event) {
-    event.preventDefault();
-    search();
+    setSearch(event.target.value);
   }
 
-  function handleKeywordChange(event) {
-    setKeyword(event.target.value);
-  }
-
+<<<<<<< HEAD
   function load() {
     setLoaded(true);
     search();
@@ -69,4 +66,21 @@ export default function Dictionary(props) {
     search();
     return "Loading";
   }
+=======
+  return (
+    <div className="Dictionary">
+      <section>
+        <h1>What word do you want to look up?</h1>
+        <form onSubmit={dictionary} className="form">
+          <input type="search" onChange={handleSubmit} />
+        </form>
+        <div className="hint">
+          suggested words: sunset, wine, yoga, plant...
+        </div>
+      </section>
+      <Results results={results} />
+      <Photos photos={photos} />
+    </div>
+  );
+>>>>>>> 009d461d85a89fb3bf4ea1ba7720758268ef7d8b
 }
