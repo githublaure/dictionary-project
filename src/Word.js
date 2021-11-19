@@ -1,5 +1,6 @@
 import React from "react";
 import "./Word.css";
+import audio from "./audio.png";
 
 export default function Phonetics(props) {
   function playAudio(event) {
@@ -13,7 +14,7 @@ export default function Phonetics(props) {
         <h3 className="word">{props.word}</h3>
 
         <img
-          src="/img/audio.svg"
+          src={audio}
           alt="audio icon"
           className="word--audio-icon"
           onClick={playAudio}

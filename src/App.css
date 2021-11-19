@@ -24,6 +24,8 @@ img {
 }
 
 body {
+  background-size: 100% 100%;
+  background-image: -moz-linear-gradient(rgb(38, 171, 251), rgb(52, 230, 239));
   background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
   font-family: "Nunito", sans-serif;
   padding: 0;
